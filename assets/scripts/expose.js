@@ -12,7 +12,7 @@ function init() {
   const selectedAudio = document.querySelector(".hidden"); //audio element
   const volumeIcon = document.querySelector("img[alt = 'Volume level 2']"); //volume icon
   const volumeSelector = document.querySelector("#volume"); //volume slider
-  const playButton = document.querySelector("button");
+  const playButton = document.querySelector("button"); //Play Sound button
   //print in console for debug
   console.log(selectedImage);
   console.log(selectedAudio);
@@ -37,6 +37,7 @@ function init() {
     //console.log(selectedAudio.volume); //uncomment to debug audio volue setting
   })
 
+  //play audio and confetti (if party horn is selected) when pressing Play Sound button
   playButton.addEventListener('click', (event) => {
     selectedAudio.play();
     if (selectorHorns.value == "party-horn") {
