@@ -22,7 +22,6 @@ function init() {
   window.onload = function () {
       generateVoiceList();
   };
-
   // event listener to generate voices list when voices change
   speechSynthesis.onvoiceschanged = function () {
       generateVoiceList();
