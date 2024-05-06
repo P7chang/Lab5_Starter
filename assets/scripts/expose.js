@@ -4,17 +4,22 @@ window.addEventListener('DOMContentLoaded', init);
 
 function init() {
   // TODO
+  //confetti
+  const jsConfetti = new JSConfetti()
+
   const selectorHorns = document.getElementById("horn-select"); //selector element
   const selectedImage = document.querySelector("img"); //image representing the selected horn
   const selectedAudio = document.querySelector(".hidden"); //audio element
   const volumeIcon = document.querySelector("img[alt = 'Volume level 2']"); //volume icon
   const volumeSelector = document.querySelector("#volume"); //volume slider
+  const playButton = document.querySelector("button");
   //print in console for debug
   console.log(selectedImage);
   console.log(selectedAudio);
   console.log(volumeIcon);
   console.log(volumeSelector);
   console.log(volumeSelector.value);
+  console.log(playButton);
 
   //call functions when horn selector changed by user
   selectorHorns.addEventListener('change', (event) => {
@@ -25,11 +30,18 @@ function init() {
   })
 
   //call functions when volume slider changed by user
-  volumeSelector.addEventListener('change', (event) => {
+  volumeSelector.addEventListener('input', (event) => {
     let selectedVol = volumeSelector.value;
     volumeIcon.src = selectVolume(selectedVol);
     selectedAudio.volume = selectedVol/100;
     //console.log(selectedAudio.volume); //uncomment to debug audio volue setting
+  })
+
+  playButton.addEventListener('click', (event) => {
+    selectedAudio.play();
+    if (selectorHorns.value == "party-horn") {
+      jsConfetti.addConfetti();
+    }
   })
 
 }
