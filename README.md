@@ -3,6 +3,8 @@ Member: Peter Chang, Sihan Wang
 
 Expose:
 https://p7chang.github.io/Lab5_Starter/expose.html
+
+
 Explore:
 https://p7chang.github.io/Lab5_Starter/explore.html
 
