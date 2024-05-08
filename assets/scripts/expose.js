@@ -13,7 +13,7 @@ function init() {
   const volumeIcon = document.querySelector("img[alt = 'Volume level 2']"); //volume icon
   const volumeSelector = document.querySelector("#volume"); //volume slider
   const playButton = document.querySelector("button"); //Play Sound button
-  //print in console for debug
+  //print in console for debugging
   console.log(selectedImage);
   console.log(selectedAudio);
   console.log(volumeIcon);
