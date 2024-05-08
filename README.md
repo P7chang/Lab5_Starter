@@ -4,6 +4,10 @@ Member: Peter Chang, Sihan Wang
 Expose:
 https://p7chang.github.io/Lab5_Starter/expose.html
 
+
+Explore:
+https://p7chang.github.io/Lab5_Starter/explore.html
+
 Explore Part 3:
 Question 1: I wouldn't use a unit test to test the “message” feature of a messaging application because "message" feature involves multiple components, like text input fields, message threads, send buttons, and message display areas. We can divide the large feature into smaller parts and test each one.
 
